@@ -39,25 +39,24 @@ function App() {
   
   return (
   //  <RouterProvider router={router}  context={myContext}/>
-  <>
-  <myContext.Provider value={[user,setUser]}>
+  
+  
       <Router>
-        <NavBar/>
-        <Routes>
-          <Route path='/' element={<Navigate to='home'/>}/>
-          <Route path='/home' element={<Home/>}/>
-          <Route path='/login'element={<Login/>}/>
-          <Route path='/signup'element={<SignUP/>}/>
-          <Route path='/dashboard' element={<Dashboard/>} />
-          <Route path='/student/:id' element={<StudentPage/>} />
-          <Route path="reports" element={<ReportsPage/>}/>
-          <Route path='/classroom/:class_id' element={<ClassroomPage name={'denis'}/>} />
-      </Routes>
-
+          <NavBar/>
+          <Routes>
+            <Route path='/' element={<Navigate to='home'/>}/>
+            <Route path='/home' element={<Home/>}/>
+            <Route path='/login'element={<Login/>}/>
+            <Route path='/signup'element={<SignUP/>}/>
+            <Route path='/dashboard' element={<Dashboard/>} />
+            <Route path='/student/:id' element={<StudentPage/>} />
+            <Route path="reports" element={<ReportsPage/>}/>
+            <Route path='/classroom/:class_id' element={<ClassroomPage name={'denis'}/>} />
+        </Routes>
       </Router>
-  </myContext.Provider>
 
-  </>
+
+  
   );
 }
 
