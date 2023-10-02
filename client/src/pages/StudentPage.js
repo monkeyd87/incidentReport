@@ -15,7 +15,7 @@ export const StudentPage = ()=>{
 
 
     const remove = async(reportId)=>{
-        const response = await fetch('http://localhost:8000/api/student/'+id+'/report/'+reportId+"/remove",{
+        const response = await fetch('api/student/'+id+'/report/'+reportId+"/remove",{
             headers:{
                 authorization: "bearer "+token
             },
@@ -28,7 +28,7 @@ export const StudentPage = ()=>{
 
     const getStudent = async()=>{
         try{
-            const response = await fetch('http://localhost:8000/api/student/'+id,{
+            const response = await fetch('api/student/'+id,{
                 headers:{
                     authorization: "bearer "+token
 

@@ -26,7 +26,7 @@ export const ReportsPage = ()=>{
     }
     const deleteReport = async(id)=>{
         try{
-            const res = await fetch("http://localhost:8000/api/reports/"+id,{
+            const res = await fetch("api/reports/"+id,{
                 headers:{
                     authorization: "bearer "+token
                 },

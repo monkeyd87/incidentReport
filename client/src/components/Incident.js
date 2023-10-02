@@ -48,7 +48,7 @@ export const Incident = (props)=>{
 
     const handleSubmit = async()=>{
         try{
-            const response = fetch('http://localhost:8000/api/student/addReport',{
+            const response = fetch('api/student/addReport',{
                 headers:{
                     'content-type':'application/json',
                     authorization: 'bearer '+token
@@ -84,7 +84,7 @@ export const Incident = (props)=>{
 
     const getStudents = async()=>{
         try{
-            const responce = await fetch('http://localhost:8000/api/student',{
+            const responce = await fetch('api/student',{
                 headers:{
                     authorization: "bearer "+token
                 }

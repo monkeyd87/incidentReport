@@ -31,7 +31,7 @@ export const AddStudent = ({getStudents,onHide,...props})=>{
 
     const handleSubmit=async()=>{
         try{
-            const response =  await fetch('http://localhost:8000/api/student',
+            const response =  await fetch('/api/student',
             {   
                 method:'POST',
                 headers:{

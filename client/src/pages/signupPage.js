@@ -12,7 +12,7 @@ export const SignUP = ()=>{
     const handleSubmit= async(event)=>{
         event.preventDefault()
         try{
-            const responce = await fetch("http://localhost:8000/api/signup",{
+            const responce = await fetch("api/signup",{
                 method:"POST",
                 headers:{
                     "content-type":"application/json"
