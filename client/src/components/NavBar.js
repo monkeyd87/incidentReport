@@ -11,7 +11,7 @@ export const NavBar = ({signout,...props})=>{
         signout()
         setToken(prev=>'')
         localStorage.token = ''
-        navigate('/login')
+        navigate('/')
     }
     return(
         <Navbar  className="border-bottom " fixed={true} >
