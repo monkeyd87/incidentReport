@@ -44,9 +44,8 @@ function App() {
       <Router>
           <NavBar/>
           <Routes>
-            <Route path='/' element={<Navigate to='home'/>}/>
+            <Route path='/' element={<Login/>}/>
             <Route path='/home' element={<Home/>}/>
-            <Route path='/login'element={<Login/>}/>
             <Route path='/signup'element={<SignUP/>}/>
             <Route path='/dashboard' element={<Dashboard/>} />
             <Route path='/student/:id' element={<StudentPage/>} />

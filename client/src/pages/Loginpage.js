@@ -1,10 +1,10 @@
 import {Card,Form,FloatingLabel,Button } from "react-bootstrap"
 import { useEffect, useState } from "react"
-import{useNavigate,Link} from 'react-router-dom'
+import{useNavigate,Link, Navigate} from 'react-router-dom'
 export const Login = ()=>{
     const [email,setEmail]= useState('')
     const [password,setPassword]= useState('')
-    const [token,setToken]=useState('')
+    const [token,setToken]=useState(localStorage.token)
     const navigate = useNavigate()
 
     const handleSubmit= async(event)=>{
@@ -32,7 +32,9 @@ export const Login = ()=>{
         }
 
     }
-   
+   if(token){
+    return <Navigate to="/home"/>
+   }
 
     return(
         <div className='d-flex justify-content-center align-items-center' style={{height:'95vh'}}>
