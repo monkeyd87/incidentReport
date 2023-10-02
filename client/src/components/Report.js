@@ -21,7 +21,7 @@ export const Report = ({remove,...props})=>{
 
 
     return(
-        <div  className="  gap-3 rounded col-4  d-flex p-3"  style={{backgroundColor:'rgba(0,29,119,1)'}}>
+        <div  className="  gap-3 rounded col-12 col-lg-6  d-flex p-3"  style={{backgroundColor:'rgba(0,29,119,1)'}}>
             <div className=" rounded bg-light d-flex justify-content-center align-items-center" style={{width:'100px',height:'100px'}}><FontAwesomeIcon onClick={handleShow} role="button"size='xl' icon={faNewspaper}/></div>
             <div className=' w-75 justify-content-center d-flex rounded bg-light border border-3 p-3'>
                 <h4>{props.briefDescription?props.briefDescription:'missing description'}</h4>
