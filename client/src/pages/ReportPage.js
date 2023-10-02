@@ -61,7 +61,7 @@ export const ReportsPage = ()=>{
                 </Card.Body>
             </Card>
         <h1>Reports</h1>
-        <div className="report-container gap-1 d-flex justify-content-center w-100 flex-wrap">
+        <div className="report-container gap-1 d-flex justify-content-center w-100  flex-wrap flex-column flex-lg-row flex-md-row">
             {filterList.map(item=>{
                 return(
                     <Report remove={deleteReport} {...item}/>
