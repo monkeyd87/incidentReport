@@ -39,7 +39,7 @@ export const Home = ()=>{
         author: '',
       };
 
-      const [user,setUser] = useOutletContext()
+      const [user,setUser] = useState({})
 
 
     const handleSubmit = async()=>{
