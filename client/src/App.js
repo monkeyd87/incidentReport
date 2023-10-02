@@ -19,11 +19,13 @@ import { ReportsPage } from './pages/ReportPage';
 
 function App() {
 
-  const myContext = createContext('hello')
+  const [user,setUser] = useState({})
+
+  const myContext = createContext()
  
   const router = createBrowserRouter(createRoutesFromElements(
    
-      <Route path="/"element={<Default/>}>
+      <Route path="/" element={<Default/>}>
         <Route path='/' element={<Navigate to='home'/>}/>
         <Route path='/home' element={<Home/>}/>
         <Route path='/login'element={<Login/>}/>
@@ -36,7 +38,23 @@ function App() {
   ))
   
   return (
-   <RouterProvider router={router}  context={myContext}/>
+  //  <RouterProvider router={router}  context={myContext}/>
+  <>
+  <myContext.Provider value={[user,setUser]}>
+      <NavBar/>
+      <Route>
+        <Route path='/' element={<Navigate to='home'/>}/>
+        <Route path='/home' element={<Home/>}/>
+        <Route path='/login'element={<Login/>}/>
+        <Route path='/signup'element={<SignUP/>}/>
+        <Route path='/dashboard' element={<Dashboard/>} />
+        <Route path='/student/:id' element={<StudentPage/>} />
+        <Route path="reports" element={<ReportsPage/>}/>
+        <Route path='/classroom/:class_id' element={<ClassroomPage name={'denis'}/>} />
+    </Route>
+  </myContext.Provider>
+
+  </>
   );
 }
 

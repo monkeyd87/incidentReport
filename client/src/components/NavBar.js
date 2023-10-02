@@ -25,7 +25,7 @@ export const NavBar = ({signout,...props})=>{
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Container  className="justify-content-between"fluid>
                     <Navbar.Collapse id="basic-navbar-nav">
-                    {props.username && <Nav className="gap-3 ">
+                    <Nav className="gap-3 ">
                             <Nav.Item>
                                 <NavLink  style={{textDecoration:'none',color:'black'}} to='/home'>Home</NavLink>
                             </Nav.Item>
@@ -35,7 +35,7 @@ export const NavBar = ({signout,...props})=>{
                             <Nav.Item>
                                 <NavLink style={{textDecoration:'none',color:'black'}} to='/reports'>Reports</NavLink>
                             </Nav.Item>
-                        </Nav> }
+                        </Nav>
                     </Navbar.Collapse>
                     </Container>
                 {props.username&&<Button onClick={handleSignOut} size="md">sign out</Button>}
