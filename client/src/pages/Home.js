@@ -139,7 +139,7 @@ export const Home = ()=>{
 
 
     if(!token){
-        return( <Navigate to='/login'/>)
+        return( <Navigate to='/'/>)
      }
 
 
