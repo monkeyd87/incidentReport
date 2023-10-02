@@ -38,7 +38,7 @@ export const NavBar = ({signout,...props})=>{
                         </Nav>
                     </Navbar.Collapse>
                     </Container>
-                {props.username&&<Button onClick={handleSignOut} size="md">sign out</Button>}
+                {token&&<Button onClick={handleSignOut} size="md">sign out</Button>}
         </Navbar>
     )
 }
