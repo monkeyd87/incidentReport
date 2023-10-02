@@ -25,10 +25,9 @@ function App() {
  
   const router = createBrowserRouter(createRoutesFromElements(
    
-      <Route path="/" element={<Default/>}>
-        <Route path='/' element={<Navigate to='home'/>}/>
+      <Route  element={<Default/>}>
+        <Route path='/' element={<Login/>}/>
         <Route path='/home' element={<Home/>}/>
-        <Route path='/login'element={<Login/>}/>
         <Route path='/signup'element={<SignUP/>}/>
         <Route path='/dashboard' element={<Dashboard/>} />
         <Route path='/student/:id' element={<StudentPage/>} />
@@ -38,21 +37,21 @@ function App() {
   ))
   
   return (
-  //  <RouterProvider router={router}  context={myContext}/>
+   <RouterProvider router={router}  context={myContext}/>
   
   
-      <Router>
-          <NavBar/>
-          <Routes>
-            <Route path='/' element={<Login/>}/>
-            <Route path='/home' element={<Home/>}/>
-            <Route path='/signup'element={<SignUP/>}/>
-            <Route path='/dashboard' element={<Dashboard/>} />
-            <Route path='/student/:id' element={<StudentPage/>} />
-            <Route path="/reports" element={<ReportsPage/>}/>
-            <Route path='/classroom/:class_id' element={<ClassroomPage name={'denis'}/>} />
-        </Routes>
-      </Router>
+      // <Router>
+      //     <NavBar/>
+      //     <Routes>
+      //       <Route path='/' element={<Login/>}/>
+      //       <Route path='/home' element={<Home/>}/>
+      //       <Route path='/signup'element={<SignUP/>}/>
+      //       <Route path='/dashboard' element={<Dashboard/>} />
+      //       <Route path='/student/:id' element={<StudentPage/>} />
+      //       <Route path="/reports" element={<ReportsPage/>}/>
+      //       <Route path='/classroom/:class_id' element={<ClassroomPage name={'denis'}/>} />
+      //   </Routes>
+      // </Router>
 
 
   
