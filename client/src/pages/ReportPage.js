@@ -12,7 +12,7 @@ export const ReportsPage = ()=>{
 
     const getReports = async() =>{
         try{
-            const res = await fetch('http://localhost:8000/api/reports',{
+            const res = await fetch('api/reports',{
                 headers:{
                     authorization: "bearer "+token
                 }

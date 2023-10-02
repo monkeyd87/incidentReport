@@ -16,7 +16,7 @@ export const Dashboard = ({context})=>{
 
     const getStudents = async()=>{
         try{
-            const responce = await fetch('http://localhost:8000/api/student',{
+            const responce = await fetch('api/student',{
                 headers:{
                     authorization: "bearer "+token
                 }
