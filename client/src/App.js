@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState,useEffect,createContext} from 'react'
 import { NavBar } from './components/NavBar';
-import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route,Router, createHashRouter,Navigate,Routes  } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route,BrowserRouter as Router, createHashRouter,Navigate,Routes  } from 'react-router-dom';
 import { Default } from './pages/Default';
 import { ClassroomPage } from './pages/ClassroomPage';
 import { Login } from './pages/Loginpage';
