@@ -16,7 +16,7 @@ export const Dashboard = ({context})=>{
 
     const getStudents = async()=>{
         try{
-            const responce = await fetch('api/student',{
+            const responce = await fetch('https://wlcpincidentreport-b83c7d609aa0.herokuapp.com/api/student',{
                 headers:{
                     authorization: "bearer "+token
                 }

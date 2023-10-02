@@ -22,7 +22,7 @@ export const Student = ({getStudent,_id,firstname,lastname,grade,...props})=>{
         const sure =  window.confirm('Are you sure you want to delete student all data will be lost')
         if(sure){
             try{
-                const response = await fetch('api/student/'+_id,{
+                const response = await fetch('https://wlcpincidentreport-b83c7d609aa0.herokuapp.com/api/student/'+_id,{
                     headers:{
                         authorization: "bearer "+localStorage.token
                     },

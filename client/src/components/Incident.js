@@ -48,7 +48,7 @@ export const Incident = (props)=>{
 
     const handleSubmit = async()=>{
         try{
-            const response = fetch('api/student/addReport',{
+            const response = fetch('https://wlcpincidentreport-b83c7d609aa0.herokuapp.com/api/student/addReport',{
                 headers:{
                     'content-type':'application/json',
                     authorization: 'bearer '+token
@@ -84,7 +84,7 @@ export const Incident = (props)=>{
 
     const getStudents = async()=>{
         try{
-            const responce = await fetch('api/student',{
+            const responce = await fetch('https://wlcpincidentreport-b83c7d609aa0.herokuapp.com/api/student',{
                 headers:{
                     authorization: "bearer "+token
                 }

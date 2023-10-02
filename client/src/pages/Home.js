@@ -44,7 +44,7 @@ export const Home = ()=>{
 
     const handleSubmit = async()=>{
         try{
-            const response = fetch('api/student/addReport',{
+            const response = fetch('https://wlcpincidentreport-b83c7d609aa0.herokuapp.com/api/student/addReport',{
                 headers:{
                     'content-type':'application/json',
                     authorization: 'bearer '+token
@@ -75,7 +75,7 @@ export const Home = ()=>{
     }
     const  getUser = async()=>{
         try{
-            const responce = await fetch('api/user/me',{
+            const responce = await fetch('https://wlcpincidentreport-b83c7d609aa0.herokuapp.com/api/user/me',{
                 headers:{
                     authorization: "bearer "+token
                 }
@@ -94,7 +94,7 @@ export const Home = ()=>{
 
     const getStudents = async()=>{
         try{
-            const responce = await fetch('api/student',{
+            const responce = await fetch('https://wlcpincidentreport-b83c7d609aa0.herokuapp.com/api/student',{
                 headers:{
                     authorization: "bearer "+token
                 }

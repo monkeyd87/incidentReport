@@ -26,7 +26,7 @@ export const ReportsPage = ()=>{
     }
     const deleteReport = async(id)=>{
         try{
-            const res = await fetch("api/reports/"+id,{
+            const res = await fetch("https://wlcpincidentreport-b83c7d609aa0.herokuapp.com/api/reports/"+id,{
                 headers:{
                     authorization: "bearer "+token
                 },

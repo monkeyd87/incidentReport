@@ -10,7 +10,7 @@ export const Login = ()=>{
     const handleSubmit= async(event)=>{
         event.preventDefault()
         try{
-            const responce = await fetch("api/login",{
+            const responce = await fetch("https://wlcpincidentreport-b83c7d609aa0.herokuapp.com/api/login",{
                 method:"POST",
                 headers:{
                     "content-type":"application/json"

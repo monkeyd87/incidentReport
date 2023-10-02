@@ -31,7 +31,7 @@ export const AddStudent = ({getStudents,onHide,...props})=>{
 
     const handleSubmit=async()=>{
         try{
-            const response =  await fetch('/api/student',
+            const response =  await fetch('https://wlcpincidentreport-b83c7d609aa0.herokuapp.com/api/student',
             {   
                 method:'POST',
                 headers:{
