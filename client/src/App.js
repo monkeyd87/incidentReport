@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState,useEffect,createContext} from 'react'
 import { NavBar } from './components/NavBar';
-import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, createHashRouter,Navigate  } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route,Router, createHashRouter,Navigate,Routes  } from 'react-router-dom';
 import { Default } from './pages/Default';
 import { ClassroomPage } from './pages/ClassroomPage';
 import { Login } from './pages/Loginpage';
@@ -41,17 +41,20 @@ function App() {
   //  <RouterProvider router={router}  context={myContext}/>
   <>
   <myContext.Provider value={[user,setUser]}>
-      <NavBar/>
-      <Route>
-        <Route path='/' element={<Navigate to='home'/>}/>
-        <Route path='/home' element={<Home/>}/>
-        <Route path='/login'element={<Login/>}/>
-        <Route path='/signup'element={<SignUP/>}/>
-        <Route path='/dashboard' element={<Dashboard/>} />
-        <Route path='/student/:id' element={<StudentPage/>} />
-        <Route path="reports" element={<ReportsPage/>}/>
-        <Route path='/classroom/:class_id' element={<ClassroomPage name={'denis'}/>} />
-    </Route>
+      <Router>
+        <NavBar/>
+        <Routes>
+          <Route path='/' element={<Navigate to='home'/>}/>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/login'element={<Login/>}/>
+          <Route path='/signup'element={<SignUP/>}/>
+          <Route path='/dashboard' element={<Dashboard/>} />
+          <Route path='/student/:id' element={<StudentPage/>} />
+          <Route path="reports" element={<ReportsPage/>}/>
+          <Route path='/classroom/:class_id' element={<ClassroomPage name={'denis'}/>} />
+      </Routes>
+
+      </Router>
   </myContext.Provider>
 
   </>
