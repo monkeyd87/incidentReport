@@ -23,7 +23,7 @@ function App() {
 
   const myContext = createContext()
  
-  const router = createBrowserRouter(createRoutesFromElements(
+  const router = createHashRouter(createRoutesFromElements(
    
       <Route  element={<Default/>}>
         <Route path='/' element={<Login/>}/>
