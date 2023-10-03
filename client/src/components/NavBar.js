@@ -16,7 +16,7 @@ export const NavBar = ({signout,...props})=>{
     return(
         <Navbar  className="border-bottom " fixed={true} >
 
-            <Navbar.Brand href="/home">
+            <Navbar.Brand href="/">
                     <div className="" style={{width:'150px'}}>
                         <img  className="h-100 w-100"src={require('../assets/header_logo-WILCP.png')}/> 
                     </div>
