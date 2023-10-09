@@ -5,6 +5,7 @@ export const SignUP = ()=>{
     const [email,setEmail]= useState('')
     const [password,setPassword]= useState('')
     const [username,setUsername]= useState('')
+    const [key,setKey]= useState('')
     const[admin,setAdmin] = useState(false)
     const [token,setToken]=useState('')
     const navigate = useNavigate()
@@ -63,6 +64,14 @@ export const SignUP = ()=>{
                              className="mb-3"
                         >
                             <Form.Control required onChange={(event)=>setPassword(event.target.value)} type="password" placeholder="Password" value={password}/>
+                        </FloatingLabel>
+
+                        <FloatingLabel 
+                             controlId="floatingInput"
+                             label="Key"
+                             className="mb-3"
+                        >
+                            <Form.Control required onChange={(event)=>setKey(event.target.value)} type="text" placeholder="Password" value={key}/>
                         </FloatingLabel>
 
                         <Form.Group className="d-flex gap-1" style={{float:'right'}}>
