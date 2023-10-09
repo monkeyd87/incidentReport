@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken')
 
 router.route('/')
 .post(async(req,res)=>{
+    if(!req.body.key) return res.json({message:'Not authorized'})
     try{
 
         const user = await User.create(req.body)
