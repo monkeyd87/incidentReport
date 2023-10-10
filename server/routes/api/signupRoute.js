@@ -6,12 +6,13 @@ const jwt = require('jsonwebtoken')
 
 router.route('/')
 .post(async(req,res)=>{
-    if(!req.body.key) return res.json({message:'Not authorized'})
+        const {key,username,email,password} = req.body
+    if(key!='educ8fortune!') return res.json({message:'Not authorized'})
     try{
-
-        const user = await User.create(req.body)
+        
+        const user = await User.create({email,username,password})
         if(!user) return res.status(400).json({message:'problom'})
-        const {username,admin,teacher,_id} = user
+        const {admin,teacher,_id} = user
         const token = jwt.sign({payload:{username,admin,teacher,_id}},'super-secret')
         res.status(200).json({token:token})
     }catch(err){
